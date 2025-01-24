@@ -1,38 +1,250 @@
-.App {
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #ededed;
+}
+
+.portfolio {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Section */
+.header {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #6c63ff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.header nav a {
+  color: #a9a9a9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: #6c63ff;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #1a1a1a;
+  padding: 5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero .name {
+  color: #6c63ff;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  color: #a9a9a9;
+}
+
+.hero .description {
+  max-width: 600px;
+  margin: 1rem auto;
+  color: #a9a9a9;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  background-color: #6c63ff;
+  color: #ededed;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #7d5fff;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #6c63ff;
+}
+
+/* About Section */
+.about {
+  padding: 2rem 1rem;
+  background-color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about h3 {
+  color: #6c63ff;
+}
+
+.education,
+.interests {
+  width: 45%;
+}
+
+/* Projects Section */
+.projects {
+  padding: 2rem 1rem;
+  background-color: #121212;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(108, 99, 255, 0.3);
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+  color: #6c63ff;
+}
+
+.project-card a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Skills Section */
+.skills {
+  padding: 2rem 1rem;
+  background-color: #1a1a1a;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.skill-rectangle {
+  background: #6c63ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 120px;
+  text-align: center;
+}
+
+/* Achievements Section */
+.achievements {
+  padding: 2rem 1rem;
+  background-color: #121212;
+}
+
+.achievements-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.achievement-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.achievement-card h3 {
+  color: #6c63ff;
+}
+
+/* Contact Section */
+.contact {
+  padding: 2rem 1rem;
+  background-color: #1a1a1a;
+}
+
+.contact form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.contact input,
+.contact textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #121212;
+  color: #ededed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact button {
+  background: #6c63ff;
+  color: #ededed;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background: #7d5fff;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background: #1a1a1a;
+  color: #a9a9a9;
 }
